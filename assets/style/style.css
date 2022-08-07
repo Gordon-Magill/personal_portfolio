@@ -1,0 +1,91 @@
+:root {
+    --backgroundColor: rgb(94, 93, 93);
+    --highlightColor: rgb(5, 115, 115);
+    --lowlightColor: rgb(201, 124, 0);
+    --smallRadius: 10px;
+    --largeRadius: 20px;
+}
+
+
+/* Basic flow formatting */
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* Header + nav formatting */
+
+header {
+    align-items: center;
+
+}
+
+nav {
+    display: flex;
+    background-color: darkgoldenrod;
+    justify-content: flex-end;
+}
+
+/* Hero image formatting */
+
+.hero {
+    display: block;
+    height: 400px;
+    width: 100%;
+    background-image: url("../images/hero.png");
+    background-size: cover;
+    background-position: center;
+    background-color: aqua;
+    alt: ""; /*Decorative image - intentionally no alt text*/
+}
+
+
+
+
+
+/* Main formatting */
+
+main {
+    background-color: gray;
+}
+
+/* Aside formatting */
+
+aside {
+    background-color: aqua;
+}
+
+/* Footer formatting */
+
+footer {
+    background-color: blueviolet;
+
+}
+
+/* Screen size adjustments */
+
+/* Large screens and above*/
+@media screen and (min-width: 992px) {
+
+}
+
+/* Medium screens */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Small screens */
+@media screen and (min-width: 600px) {
+
+}
+
+/* Extra small screens */
+@media screen and (max-width: 600px) {
+
+}
