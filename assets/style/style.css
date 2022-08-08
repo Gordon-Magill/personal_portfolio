@@ -2,8 +2,23 @@
     --backgroundColor: rgb(94, 93, 93);
     --highlightColor: rgb(5, 115, 115);
     --lowlightColor: rgb(201, 124, 0);
-    --smallRadius: 10px;
+    --smallRadius: 7px;
     --largeRadius: 20px;
+}
+
+/* From challenge 1 Horiseon example */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: white;
+}
+
+body {
+    height: 100%;
 }
 
 
@@ -11,32 +26,54 @@
 
 .row {
     display: flex;
+    flex-flow: row nowrap;
+}
+
+.rowWrap {
+    display: flex;
     flex-flow: row wrap;
 }
 
 .column {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
 }
 
 /* Header + nav formatting */
 
 header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    background-color: rgb(0, 55, 133);
+    height: 80px;
 
 }
 
+header h1 {
+    position: relative;
+    display: inline-block;
+    font-size: 50px;
+    /* top: 17%; */
+    left: 5%;
+    color: white;
+    text-align: center;
+}
+
 nav {
-    display: flex;
     background-color: darkgoldenrod;
-    justify-content: flex-end;
+    float: right;
+    padding-top: 10px;
+    font-size: 20px;
+    /* text-align: justify; */
 }
 
 /* Hero image formatting */
 
 .hero {
     display: block;
-    height: 400px;
+    height: 20%;
     width: 100%;
     background-image: url("../images/hero.png");
     background-size: cover;
@@ -45,20 +82,107 @@ nav {
     alt: ""; /*Decorative image - intentionally no alt text*/
 }
 
-
-
-
-
 /* Main formatting */
 
 main {
-    background-color: gray;
+    background-color: rgb(80, 80, 80);
+    width: 100%;
+    justify-content: space-around;
+    border: 2px solid black
+    
+
 }
 
+main section {
+    /* border: 2px black solid; */
+    margin: 10px
+}
+
+section article {
+    background-color: gray;
+    position: relative;
+    /* border: 2px dashed black; */
+    border-radius: var(--largeRadius);
+    width: 98%;
+    margin: 10px;
+    padding: var(--largeRadius);
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.labelIcon:hover {
+    box-shadow: var(--smallRadius) var(--smallRadius) 10px 0  rgb(98, 98, 98);
+    transition: all 0.15s ease-in-out;
+}
+
+#infoContainer {
+    width: 80%;
+}
+
+.labelIcon{
+    position: relative;
+    text-align: center;
+    color: white;
+    border-radius: var(--smallRadius);
+    /* border: 2px solid black; */
+    /* margin-bottom: 0; */
+}
+
+.labelIcon p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    font-weight: bolder;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 0px black;
+}
+
+.titleCard {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: -14px;
+    left: 5%;
+    align-self: flex-start;
+    padding: 5px;
+    /* align-items: flex-start; */
+    /* justify-self: flex-start; */
+    border-radius: var(--smallRadius);
+}
+
+img {
+    border-radius: var(--smallRadius);
+    height: 100%
+}
 /* Aside formatting */
 
 aside {
+    position: relative;
     background-color: aqua;
+    width: 20%;
+    margin: 20px;
+    margin-right: 40px;
+    /* height: 100%; */
+    padding: 20px;
+    /* margin-right: 20px;
+    margin-top: -50px */
+    border: 2px dashed black;
+    border-radius: var(--largeRadius);
+    /* align-items: stretch; */
+    /* flex-grow: 2; */
+}
+
+.aboutMe {
+    
+}
+
+.fullstackSection {
+
+}
+
+.smallImage {
+    height: 120px
 }
 
 /* Footer formatting */
