@@ -14,9 +14,9 @@
 
 <body>
     <!-- Look at these nice, semantic elements -->
-    <header>
+    <header class="rowWrap">
         <h1>Gordon Magill</h1>
-        <nav>
+        <nav class="rowWrap">
             <a href="#aboutMeSection">About me</a>
             <a href="#fullstackSection">Full Stack Development</a>
             <a href="#chemengSection">Chemical Engineering</a>
@@ -31,8 +31,8 @@
 
         <section class="column" id="infoContainer">
 
-            <article class="aboutMe" id="aboutMeSection">
-                <h2 class="titleCard"> About Me</h2>
+            <article class="aboutMe" >
+                <h2 class="titleCard" id="aboutMeSection"> About Me</h2>
                 <section class="row" id="aboutMeContent">
                     <p>
                         Hi.<br><br><br>
@@ -46,8 +46,8 @@
                 </section>
             </article>
 
-            <article class="fullstackSection rowWrap" id="fullstackSection">
-                <h2 class="titleCard"> Full Stack Development</h2>
+            <article class="fullstackSection rowWrap" >
+                <h2 class="titleCard" id="fullstackSection"> Full Stack Development</h2>
 
                 <section class="labelIcon" id="project1">
                     <a href="https://gordon-magill.github.io/code_refactoring/">
@@ -55,9 +55,9 @@
                             src="./assets/images/week1_deployed_page.png"
                             class="smallImage"
                             alt="">
-                        <p>
+                        <h3>
                             Code refactoring
-                        </p>
+                        </h3>
                     </a>
                 </section>
 
@@ -67,9 +67,9 @@
                             src="https://techcrunch.com/wp-content/uploads/2022/04/global_blue_tech.jpg?w=1390&crop=1"
                             class="smallImage"
                             alt="">
-                        <p>
+                        <h3>
                             Project 2
-                        </p>
+                        </h3>
                     </a>
                 </section>
 
@@ -79,9 +79,9 @@
                             src="https://techcrunch.com/wp-content/uploads/2022/04/global_blue_tech.jpg?w=1390&crop=1"
                             class="smallImage"
                             alt="">
-                        <p>
+                        <h3>
                             Project 3
-                        </p>
+                        </h3>
                     </a>
                 </section>
 
@@ -91,16 +91,16 @@
                             src="https://techcrunch.com/wp-content/uploads/2022/04/global_blue_tech.jpg?w=1390&crop=1"
                             class="smallImage"
                             alt="">
-                        <p>
+                        <h3>
                             Project 4
-                        </p>
+                        </h3>
                     </a>
                 </section>
 
             </article>
 
-            <article class="chemengSection rowWrap" id="chemengSection">
-                <h2 class="titleCard">Chemical Engineering</h2>
+            <article class="chemengSection rowWrap">
+                <h2 class="titleCard" id="chemengSection">Chemical Engineering</h2>
 
                 <section class="labelIcon" id="project5">
                     <a href="#">
@@ -108,9 +108,9 @@
                             src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
                             class="smallImage"
                             alt="">
-                        <p>
+                        <h3>
                             Project 1
-                        </p>
+                        </h3>
                     </a>
                 </section>
 
@@ -120,9 +120,9 @@
                             src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
                             class="smallImage"
                             alt="">
-                        <p>
+                        <h3>
                             Project 2
-                        </p>
+                        </h3>
                     </a>
                 </section>
 
@@ -132,9 +132,9 @@
                             src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
                             class="smallImage"
                             alt="">
-                        <p>
+                        <h3>
                             Project 3
-                        </p>
+                        </h3>
                     </a>
                 </section>
 
@@ -144,17 +144,20 @@
                             src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
                             class="smallImage"
                             alt="">
-                        <p>
+                        <h3>
                             Project 4
-                        </p>
+                        </h3>
                     </a>
                 </section>
             </article>
 
-            <article class="contactMe" id="contactMeSection">
-                <h2 class="titleCard"> Contact Info</h2>
+            <article class="contactMe">
+                <h2 class="titleCard" id="contactMeSection"> Contact Info</h2>
                 <section class="row" id="aboutMeContent">
-                    
+                    <img src="" >
+                    <p>
+                        con
+                    </p>
                 </section>
             </article>
 
@@ -179,13 +182,12 @@
 
     </main>
 
-
-
-
-
     <footer>
-        footer content
+        <p>
+            &copy Gordon Magill, 2022
+        </p>
     </footer>
     
 </body>
+
 </html>
