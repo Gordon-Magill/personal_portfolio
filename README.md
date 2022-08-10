@@ -7,3 +7,6 @@ This is a personal portfolio site to host interesting projects that I've worked 
 ## 🚀 About Me
 I'm a chemical engineer by formal training, but have developed an interest in software development, machine learning, and automation over my career.
 I want to blend these experiences and knowledge to do what no individual developer or engineer would be capable of doing in their respective silos.
+
+Link to deployed portfolio page: https://gordon-magill.github.io/personal_portfolio/
+![Deployed page](./assets/images/portfolio_screenshot.png)
