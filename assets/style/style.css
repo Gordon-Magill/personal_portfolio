@@ -170,7 +170,7 @@ section article {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 20px;
+    font-size: 3vw;
     font-weight: bolder;
     transform: translate(-50%, -50%);
     text-shadow: -1px 1px 5px black, -1px 1px 10px black, -1px 1px 15px black;
@@ -203,32 +203,13 @@ section article {
     border-radius: var(--smallRadius);
 }
 
-/* Aside formatting */
-
-aside {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
-    position: relative;
-    background-color: aqua;
-    width: 20%;
-    margin: 20px;
-    margin-right: 40px;
-    /* height: 100%; */
-    padding: 20px;
-    /* margin-right: 20px;
-    margin-top: -50px */
-    border: 2px dashed black;
-    border-radius: var(--largeRadius);
-    /* align-items: stretch; */
-    /* flex-grow: 2; */
-}
-
 .fullstackSection > section , .chemengSection > section{
     margin: 5px;
 }
 
+#contactMeSection a{
+    font-size: 1.3vw;
+}
 
 
 /* Footer formatting */
