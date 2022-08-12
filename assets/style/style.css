@@ -211,8 +211,10 @@ section article {
 footer {
   background-color: var(--highlightColor);
   justify-content: center;
+  align-content: center;
   color: white;
-  font-size: 4vw;
+  font-size: 2vh; /* This and the height of the footer ensures the text is always contained */
+  height: 4vh;
 }
 
 /* Screen size adjustments */
