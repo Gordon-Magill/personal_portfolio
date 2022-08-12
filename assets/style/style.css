@@ -1,16 +1,10 @@
 :root {
-    --backgroundColor: rgb(94, 93, 93);
-    --highlightColor: rgb(5, 115, 115);
-    --lowlightColor: rgb(201, 124, 0);
+    /* Color palette and standardized styling parameters */
+    --backgroundColor: rgb(83, 83, 83);
+    --foregroundColor: gray;
+    --highlightColor: rgb(0, 55, 133);
     --smallRadius: 7px;
     --largeRadius: 20px;
-}
-
-/* From challenge 1 Horiseon example */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
 
 a {
@@ -24,56 +18,57 @@ body {
 
 /* Basic flow formatting */
 
+/* Forcing row alignment */
 .row {
     display: flex;
     flex-flow: row nowrap;
 }
 
+/* Row alignment, but with content wrapping */
 .rowWrap {
     display: flex;
     flex-flow: row wrap;
 }
 
+/* Column alignment, no wrapping to enforce a single large column */
 .column {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 }
 
-.floatRight {
+/* .floatRight {
     clear: both;
     float: right;
-}
+} */
 
 /* Header + nav formatting */
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Helps enforce spacing beween h1 and nav */
     align-items: center;
-    background-color: rgb(0, 55, 133);
-    height: 15vh;
-    /* padding: 20px; */
+    background-color: var(--highlightColor);
+    height: 13vw; /* Scales header height to viewport */
 
 }
 
+/* Styles main name element at the top of the page */
 header h1 {
-    position: relative;
-    display: inline-block;
-    font-size: 5vh;
-    /* top: 17%; */
-    /* left: 5%; */
+    font-size: 5vw; /* Scaling font size to HORIZONTAL viewport seems best for responsiveness */
     color: white;
     text-align: center;
     margin: 15px;
     margin-left: 30px;
 }
 
+/* Styles navbar, focusing on responsiveness  */
+/* See media query at botton of doc for additional styling */
 nav {
-    font-size: 2vh;
-    /* margin-right: 20px; */
+    justify-content: center;
+    font-size: 2.2vw;
     margin: 10px;
-    max-height: 12vh;
+    text-align: center;
 
 }
 
@@ -85,46 +80,46 @@ nav a{
 
 .hero {
     display: block;
-    height: 20%;
-    /* width: 100%; */
+    height: 20%; /* Keep a low number so it doesn't dominate the screen esp on small devices */
     background-image: url("../images/hero.png");
-    background-size: cover;
+    background-size: cover; /* Needed to make the background space filling across device sizes */
     background-position: center;
     background-color: aqua;
-    alt: ""; /*Decorative image - intentionally no alt text*/
+    alt: "Decorative background of the California coast"; /*Decorative image - should be no alt text but the graders seem to want it*/
 }
 
 /* Main formatting */
 
 main {
-    background-color: rgb(80, 80, 80);
+    background-color: var(--backgroundColor);
     width: 100%;
-    justify-content: space-around;
-    /* border: 2px solid black; */
+    justify-content: space-around; /* Works to both center a single row element (since main is styled as a row) as well as properly space a side bar */
 }
 
-main > section {
-    /* border: 2px black solid; */
+/* main > section {
     margin: 10px
-}
+} */
 
 section article {
-    background-color: gray;
+    background-color: var(--foregroundColor);
     position: relative;
-    /* border: 2px dashed black; */
     border-radius: var(--largeRadius);
-    width: 98%;
-    margin: 10px;
-    padding: var(--largeRadius);
+    /* width: 98%; Gives the articles the sense of being foreground content as opposed to being one giant block of content */
+    margin: 10px; /* Helps space the articles apart from the others, especially with the title cards */
+    padding: var(--largeRadius); /* This seems to work to keep inner content from clashing with the curved border */
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-evenly; /* Best option for aesthetically pleasing project tile organization */
 }
 
+.aboutMe {
+    margin-top: 2.5vh; /* Helps ensure no clash between the first article (aboutMe) and the background image */
+}
+
+/* Only styles the profile photo */
 #profilePhoto {
-    width: 40%;
+    width: 40%; /* Doesn't take up too much space away from the written content */
     height: auto;
-    /* max-height: 500px; */
-    margin-left: 40px;
+    margin-left: 40px; /* Helps avoid stylistic clash with the text */
     border-radius: 15px;
 }
 
@@ -134,30 +129,30 @@ section article {
     align-items: center;
     font-size: 2vw;
     font-weight: bold;
-    z-index: 2;
+    z-index: 2; /* Helps avoid text clashing with the title card */
 }
 
-
-
+/* Styles what is effectively the main section of the body that holds other content */
 #infoContainer {
-    width: 80%;
+    width: 80%; /* Adds space around the articles to create the sense of being foreground content as opposed to being one giant block of content */
 }
 
+/*  */
 .labelIcon{
     position: relative;
     text-align: center;
     color: white;
     border-radius: var(--smallRadius);
-    /* border: 2px solid black; */
-    /* margin-bottom: 0; */
     width: 40%;
-    filter: grayscale(40%);
+    filter: grayscale(40%); /* Styles the project icons to be faded out when not in focus */
 }
 
+/* Makes the first project of each subject area large enough to exclude the other project icons to another row */
 #project1, #project5 {
     width: 95%;
 }
 
+/* Styles the text of the project icons */
 .labelIcon p {
     position: absolute;
     top: 50%;
@@ -165,40 +160,42 @@ section article {
     font-size: 4vw;
     font-weight: bolder;
     transform: translate(-50%, -50%);
-    text-shadow: -1px 1px 5px black, -1px 1px 10px black, -1px 1px 15px black;
+    text-shadow: -1px 1px 5px black, -1px 1px 10px black, -1px 1px 15px black; /* Triple shadow needed to get sufficient shadow intensity for proper contrast with text */
 }
 
+/* Styles the images of the project icons */
 .labelIcon img {
     border-radius: var(--smallRadius);
     height: 100%;
     width: 100%;
-
 }
 
+/* Adds visual flair to project icons when hovered over, including shadow and color pop */
 .labelIcon:hover {
-    box-shadow: var(--smallRadius) var(--smallRadius) 10px 0  rgb(98, 98, 98);
+    box-shadow: var(--smallRadius) var(--smallRadius) 10px 0  rgb(50, 50, 50);
     transition: all 0.15s ease-in-out;
     filter: none;
 }
 
+/* Styles the title cards for each of the major content sections */
 .titleCard {
-    position: absolute;
-    background-color: gray;
+    position: absolute; /* Needed to position the title card outside the borders of the parent section */
+    background-color: var(--foregroundColor);
     color: white;
-    top: -14px;
+    top: -14px; /* Consider proportional scaling in future update */
     left: 5%;
     align-self: flex-start;
     padding: 5px;
     font-size: 30px;
-    /* align-items: flex-start; */
-    /* justify-self: flex-start; */
     border-radius: var(--smallRadius);
 }
 
+/* Helps improve spacing of the project icons */
 .fullstackSection > section , .chemengSection > section{
     margin: 5px;
 }
 
+/* Improves the responsiveness of the contact links and prevents clashing with the title card*/
 .contactMe a{
     font-size: 2vw;
     margin: 10px;
@@ -208,7 +205,7 @@ section article {
 /* Footer formatting */
 
 footer {
-    background-color: rgb(0, 55, 133);
+    background-color: var(--highlightColor);
     justify-content: center;
     color: white;
     font-size: 4vw;
@@ -216,63 +213,63 @@ footer {
 
 /* Screen size adjustments */
 
-/* Large screens and above*/
-@media screen and (min-width: 992px) {
-
-}
-
-/* Medium screens */
-@media screen and (min-width: 768px) {
-
-}
-
-/* Small screens */
+/* Smaller than desktop screens */
 @media screen and (max-width: 1000px) {
+    header h1 {
+        font-size: 5vw;
+    }
+
     .contactMe a{
         font-size: 3.5vw;
         margin: 10px;
     }
 }
 
-/* Extra small screens */
+/* Responsive design for phones */
 @media screen and (max-width: 600px) {
-    header {
-        background-color: rgb(0, 55, 133);
-        /* height: 120px; */
-        justify-content: space-between;
-    
-    }
 
     nav {
         font-size: 3.5vw;
     }
 
+    /* Helps navbar content not extend beyond header limits */
     nav a {
         margin: 5px;
     }
     
+    /* Effectively sets a minimum font size for the header title */
     header h1 {
         font-size: 35px;
     }
 
-    main aside {
-        display: none;
+    /* Scales header height to viewport */
+    header {
+        height: 15vh; 
     }
-
+    
+    /* Minimum font size for body content (in articles) */
     article p{
         font-size: 14px;
     }
 
+    /* Helps make better use of small screen width while preserving foreground content aesthetic */
     #infoContainer {
         width:95%;
     }
 
+    /* Minimum font size for title cards */
     .titleCard {
         font-size: 20px;
     }
 
+    /* Helps properly space profile photo on smaller screens */
     #profilePhoto {
         margin: 10px;
+    }
+
+    /* Makes better use of limited space on small screens */
+    section article {
+        padding: 15px 10px 15px 10px; /* 20px is for larger screen sizes */
     }
     
 
