@@ -1,40 +1,39 @@
 :root {
-    /* Color palette and standardized styling parameters */
-    --backgroundColor: rgb(83, 83, 83);
-    --foregroundColor: gray;
-    --highlightColor: rgb(0, 55, 133);
-    --smallRadius: 7px;
-    --largeRadius: 20px;
+  /* Color palette and standardized styling parameters */
+  --backgroundColor: rgb(83, 83, 83);
+  --foregroundColor: gray;
+  --highlightColor: rgb(0, 55, 133);
+  --smallRadius: 7px;
+  --largeRadius: 20px;
 }
 
 a {
-    color: white;
+  color: white;
 }
 
 body {
-    height: 100%;
+  height: 100%;
 }
-
 
 /* Basic flow formatting */
 
 /* Forcing row alignment */
 .row {
-    display: flex;
-    flex-flow: row nowrap;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 /* Row alignment, but with content wrapping */
 .rowWrap {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 /* Column alignment, no wrapping to enforce a single large column */
 .column {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 /* .floatRight {
@@ -45,55 +44,53 @@ body {
 /* Header + nav formatting */
 
 header {
-    display: flex;
-    justify-content: space-between; /* Helps enforce spacing beween h1 and nav */
-    align-items: center;
-    background-color: var(--highlightColor);
-    height: 13vw; /* Scales header height to viewport */
-
+  display: flex;
+  justify-content: space-between; /* Helps enforce spacing beween h1 and nav */
+  align-items: center;
+  background-color: var(--highlightColor);
+  height: 13vw; /* Scales header height to viewport */
 }
 
 /* Styles main name element at the top of the page */
 header h1 {
-    font-size: 5vw; /* Scaling font size to HORIZONTAL viewport seems best for responsiveness */
-    color: white;
-    text-align: center;
-    margin: 15px;
-    margin-left: 30px;
+  font-size: 5vw; /* Scaling font size to HORIZONTAL viewport seems best for responsiveness */
+  color: white;
+  text-align: center;
+  margin: 15px;
+  margin-left: 30px;
 }
 
 /* Styles navbar, focusing on responsiveness  */
 /* See media query at botton of doc for additional styling */
 nav {
-    justify-content: center;
-    font-size: 2.2vw;
-    margin: 10px;
-    text-align: center;
-
+  justify-content: center;
+  font-size: 2.2vw;
+  margin: 10px;
+  text-align: center;
 }
 
-nav a{
-    margin: 10px;
+nav a {
+  margin: 10px;
 }
 
 /* Hero image formatting */
 
 .hero {
-    display: block;
-    height: 20%; /* Keep a low number so it doesn't dominate the screen esp on small devices */
-    background-image: url("../images/hero.png");
-    background-size: cover; /* Needed to make the background space filling across device sizes */
-    background-position: center;
-    background-color: aqua;
-    alt: "Decorative background of the California coast"; /*Decorative image - should be no alt text but the graders seem to want it*/
+  display: block;
+  height: 20%; /* Keep a low number so it doesn't dominate the screen esp on small devices */
+  background-image: url("../images/hero.png");
+  background-size: cover; /* Needed to make the background space filling across device sizes */
+  background-position: center;
+  background-color: aqua;
+  alt: "Decorative background of the California coast"; /*Decorative image - should be no alt text but the graders seem to want it*/
 }
 
 /* Main formatting */
 
 main {
-    background-color: var(--backgroundColor);
-    width: 100%;
-    justify-content: space-around; /* Works to both center a single row element (since main is styled as a row) as well as properly space a side bar */
+  background-color: var(--backgroundColor);
+  width: 100%;
+  justify-content: space-around; /* Works to both center a single row element (since main is styled as a row) as well as properly space a side bar */
 }
 
 /* main > section {
@@ -101,179 +98,180 @@ main {
 } */
 
 section article {
-    background-color: var(--foregroundColor);
-    position: relative;
-    border-radius: var(--largeRadius);
-    /* width: 98%; Gives the articles the sense of being foreground content as opposed to being one giant block of content */
-    margin: 10px; /* Helps space the articles apart from the others, especially with the title cards */
-    padding: var(--largeRadius); /* This seems to work to keep inner content from clashing with the curved border */
-    flex-flow: row wrap;
-    justify-content: space-evenly; /* Best option for aesthetically pleasing project tile organization */
+  background-color: var(--foregroundColor);
+  position: relative;
+  border-radius: var(--largeRadius);
+  /* width: 98%; Gives the articles the sense of being foreground content as opposed to being one giant block of content */
+  margin: 10px; /* Helps space the articles apart from the others, especially with the title cards */
+  padding: var(
+    --largeRadius
+  ); /* This seems to work to keep inner content from clashing with the curved border */
+  flex-flow: row wrap;
+  justify-content: space-evenly; /* Best option for aesthetically pleasing project tile organization */
 }
 
 .aboutMe {
-    margin-top: 2.5vh; /* Helps ensure no clash between the first article (aboutMe) and the background image */
+  margin-top: 2.5vh; /* Helps ensure no clash between the first article (aboutMe) and the background image */
 }
 
 /* Only styles the profile photo */
 #profilePhoto {
-    width: 40%; /* Doesn't take up too much space away from the written content */
-    height: auto;
-    margin-left: 40px; /* Helps avoid stylistic clash with the text */
-    border-radius: 15px;
+  width: 40%; /* Doesn't take up too much space away from the written content */
+  height: auto;
+  margin-left: 40px; /* Helps avoid stylistic clash with the text */
+  border-radius: 15px;
 }
 
 #aboutMeContent {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vw;
-    font-weight: bold;
-    z-index: 2; /* Helps avoid text clashing with the title card */
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-weight: bold;
+  z-index: 2; /* Helps avoid text clashing with the title card */
 }
 
 /* Styles what is effectively the main section of the body that holds other content */
 #infoContainer {
-    width: 80%; /* Adds space around the articles to create the sense of being foreground content as opposed to being one giant block of content */
+  width: 80%; /* Adds space around the articles to create the sense of being foreground content as opposed to being one giant block of content */
 }
 
 /*  */
-.labelIcon{
-    position: relative;
-    text-align: center;
-    color: white;
-    border-radius: var(--smallRadius);
-    width: 40%;
-    filter: grayscale(40%); /* Styles the project icons to be faded out when not in focus */
+.labelIcon {
+  position: relative;
+  text-align: center;
+  color: white;
+  border-radius: var(--smallRadius);
+  width: 40%;
+  filter: grayscale(
+    40%
+  ); /* Styles the project icons to be faded out when not in focus */
 }
 
 /* Makes the first project of each subject area large enough to exclude the other project icons to another row */
-#project1, #project5 {
-    width: 95%;
-    margin-top: 2vw;
+#project1,
+#project5 {
+  width: 95%;
+  margin-top: 2vw;
 }
 
 /* Styles the text of the project icons */
 .labelIcon p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 4vw;
-    font-weight: bolder;
-    transform: translate(-50%, -50%);
-    text-shadow: -1px 1px 5px black, -1px 1px 10px black, -1px 1px 15px black; /* Triple shadow needed to get sufficient shadow intensity for proper contrast with text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 4vw;
+  font-weight: bolder;
+  transform: translate(-50%, -50%);
+  text-shadow: -1px 1px 5px black, -1px 1px 10px black, -1px 1px 15px black; /* Triple shadow needed to get sufficient shadow intensity for proper contrast with text */
 }
 
 /* Styles the images of the project icons */
 .labelIcon img {
-    border-radius: var(--smallRadius);
-    height: 100%;
-    width: 100%;
+  border-radius: var(--smallRadius);
+  height: 100%;
+  width: 100%;
 }
 
 /* Adds visual flair to project icons when hovered over, including shadow and color pop */
 .labelIcon:hover {
-    box-shadow: var(--smallRadius) var(--smallRadius) 10px 0  rgb(50, 50, 50);
-    transition: all 0.15s ease-in-out;
-    filter: none;
+  box-shadow: var(--smallRadius) var(--smallRadius) 10px 0 rgb(50, 50, 50);
+  transition: all 0.15s ease-in-out;
+  filter: none;
 }
 
 /* Styles the title cards for each of the major content sections */
 .titleCard {
-    position: absolute; /* Needed to position the title card outside the borders of the parent section */
-    background-color: var(--foregroundColor);
-    color: white;
-    top: -14px; /* Consider proportional scaling in future update */
-    left: 5%;
-    align-self: flex-start;
-    padding: 5px;
-    font-size: 3vw;
-    border-radius: var(--smallRadius);
+  position: absolute; /* Needed to position the title card outside the borders of the parent section */
+  background-color: var(--foregroundColor);
+  color: white;
+  top: -14px; /* Consider proportional scaling in future update */
+  left: 5%;
+  align-self: flex-start;
+  padding: 5px;
+  font-size: 3vw;
+  border-radius: var(--smallRadius);
 }
 
 /* Helps improve spacing of the project icons */
-.fullstackSection > section , .chemengSection > section{
-    margin: 5px;
+.fullstackSection > section,
+.chemengSection > section {
+  margin: 5px;
 }
 
 /* Improves the responsiveness of the contact links and prevents clashing with the title card*/
-.contactMe a{
-    font-size: 2vw;
-    margin: 10px;
-    margin-top: 2vw;
+.contactMe a {
+  font-size: 2vw;
+  margin: 10px;
+  margin-top: 2vw;
 }
-
 
 /* Footer formatting */
 
 footer {
-    background-color: var(--highlightColor);
-    justify-content: center;
-    color: white;
-    font-size: 4vw;
+  background-color: var(--highlightColor);
+  justify-content: center;
+  color: white;
+  font-size: 4vw;
 }
 
 /* Screen size adjustments */
 
 /* Smaller than desktop screens */
 @media screen and (max-width: 1000px) {
-    header h1 {
-        font-size: 5vw;
-    }
+  header h1 {
+    font-size: 5vw;
+  }
 
-    .contactMe a{
-        font-size: 3.5vw;
-        margin: 10px;
-    }
+  .contactMe a {
+    font-size: 3.5vw;
+    margin: 10px;
+  }
 }
 
 /* Responsive design for phones */
 @media screen and (max-width: 600px) {
+  nav {
+    font-size: 3.5vw;
+  }
 
-    nav {
-        font-size: 3.5vw;
-    }
+  /* Helps navbar content not extend beyond header limits */
+  nav a {
+    margin: 5px;
+  }
 
-    /* Helps navbar content not extend beyond header limits */
-    nav a {
-        margin: 5px;
-    }
-    
-    /* Effectively sets a minimum font size for the header title */
-    header h1 {
-        font-size: 35px;
-    }
+  /* Effectively sets a minimum font size for the header title */
+  header h1 {
+    font-size: 35px;
+  }
 
-    /* Scales header height to viewport */
-    header {
-        height: 15vh; 
-    }
-    
-    /* Minimum font size for body content (in articles) */
-    article p{
-        font-size: 14px;
-    }
+  /* Scales header height to viewport */
+  header {
+    height: 15vh;
+  }
 
-    /* Helps make better use of small screen width while preserving foreground content aesthetic */
-    #infoContainer {
-        width:95%;
-    }
+  /* Minimum font size for body content (in articles) */
+  article p {
+    font-size: 14px;
+  }
 
-    /* Minimum font size for title cards */
-    .titleCard {
-        font-size: 20px;
-    }
+  /* Helps make better use of small screen width while preserving foreground content aesthetic */
+  #infoContainer {
+    width: 95%;
+  }
 
-    /* Helps properly space profile photo on smaller screens */
-    #profilePhoto {
-        margin: 10px;
-    }
+  /* Minimum font size for title cards */
+  .titleCard {
+    font-size: 20px;
+  }
 
-    /* Makes better use of limited space on small screens */
-    section article {
-        padding: 15px 10px 15px 10px; /* 20px is for larger screen sizes */
-    }
-    
+  /* Helps properly space profile photo on smaller screens */
+  #profilePhoto {
+    margin: 10px;
+  }
 
-
+  /* Makes better use of limited space on small screens */
+  section article {
+    padding: 15px 10px 15px 10px; /* 20px is for larger screen sizes */
+  }
 }

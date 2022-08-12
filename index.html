@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Always good to add a CSS reset -->
-    <link rel="stylesheet", href="./assets/style/reset.css"> 
-    <link rel="stylesheet", href="./assets/style/style.css">
+    <link rel="stylesheet" , href="./assets/style/reset.css" />
+    <link rel="stylesheet" , href="./assets/style/style.css" />
 
     <!-- Personal website gets a personal name -->
     <title>Gordon Magill</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Look at these nice, semantic elements -->
     <header>
-        <h1>Gordon Magill</h1>
+      <h1>Gordon Magill</h1>
 
-        <!-- Wrap nav elements next to main header name -->
-        <nav class="rowWrap">
-            <a href="#aboutMeSection">About me</a>
-            <a href="#fullstackSection">Full Stack Development</a>
-            <a href="#chemengSection">Chemical Engineering</a>
-            <a href="#contactMeSection">Contact Info</a>
-        </nav>
-
+      <!-- Wrap nav elements next to main header name -->
+      <nav class="rowWrap">
+        <a href="#aboutMeSection">About me</a>
+        <a href="#fullstackSection">Full Stack Development</a>
+        <a href="#chemengSection">Chemical Engineering</a>
+        <a href="#contactMeSection">Contact Info</a>
+      </nav>
     </header>
 
     <!-- Background image, in this case the California coast -->
@@ -35,171 +34,164 @@
     this is mostly not used. -->
     <main class="row">
 
-        <!-- This is the defacto main section until a sidebar is added -->
-        <!-- Holds each of the major content sections -->
-        <section class="column" id="infoContainer">
-            <!-- Each article is a rounded box with content and an offset title card that acts as the navbar link jump locations -->
+      <!-- This is the defacto main section until a sidebar is added -->
+      <!-- Holds each of the major content sections -->
+      <section class="column" id="infoContainer">
+        
+        <!-- Each article is a rounded box with content and an offset title card that acts as the navbar link jump locations -->
+        <!-- About me section -->
+        <article class="aboutMe">
+          <!-- h2 ID facilitates navbar linking -->
+          <h2 class="titleCard" id="aboutMeSection">About Me</h2>
+          <section class="row" id="aboutMeContent">
+            <p>
+              Hi.<br /><br /><br />
+              I'm Gordon.<br /><br /><br />
+              This is my my portfolio.<br /><br /><br />
+              Enjoy your stay.<br /><br /><br />
+              Feel free to reach out to me once contact information has been
+              posted.
+            </p>
+            <img
+              src="./assets/images/profile_photo.jpeg"
+              alt="Profile photo of Gordon Magill"
+              id="profilePhoto"
+            />
+          </section>
+        </article>
 
-            <!-- About me section -->
-            <article class="aboutMe">
-                <!-- h2 ID facilitates navbar linking -->
-                <h2 class="titleCard" id="aboutMeSection"> About Me</h2>
-                <section class="row" id="aboutMeContent">
-                    <p>
-                        Hi.<br><br><br>
-                        I'm Gordon.<br><br><br>
-                        This is my my portfolio.<br><br><br>
-                        Enjoy your stay.<br><br><br>
-                        Feel free to reach out to me once contact
-                        information has been posted.
-                    </p>
-                    <img src="./assets/images/profile_photo.jpeg" alt="Profile photo of Gordon Magill" id="profilePhoto">
-                </section>
-            </article>
+        <!-- Full Stack Development section, a grouping of projects highlight development work -->
+        <article class="fullstackSection rowWrap">
+          <!-- h2 ID facilitates navbar linking -->
+          <h2 class="titleCard" id="fullstackSection">
+            Full Stack Development
+          </h2>
 
-            <!-- Full Stack Development section, a grouping of projects highlight development work -->
-            <article class="fullstackSection rowWrap" >
-                <!-- h2 ID facilitates navbar linking -->
-                <h2 class="titleCard" id="fullstackSection"> Full Stack Development</h2>
+          <!-- labelIcon class includes a descriptive photo as well as a shadow highlighted project title -->
+          <!-- ID's of the labelIcon classes are used for styling individual projects (currently sizing the first project) -->
 
-                <!-- labelIcon class includes a descriptive photo as well as a shadow highlighted project title -->
-                <!-- ID's of the labelIcon classes are used for styling individual projects (currently sizing the first project) -->
+          <!-- Horiseon class project -->
+          <section class="labelIcon" id="project1">
+            <!-- Whole title card content is a link (both image AND label) -->
+            <a href="https://gordon-magill.github.io/code_refactoring/">
+              <!-- Project icon -->
+              <img
+                src="./assets/images/week1_deployed_page.png"
+                class="smallImage"
+                alt="Screenshot of deployed code refactoring project"
+              />
+              <!-- Project label -->
+              <p>Code refactoring</p>
+            </a>
+          </section>
 
-                <!-- Horiseon class project -->
-                <section class="labelIcon" id="project1">
+          <!-- Placeholder project -->
+          <section class="labelIcon" id="project2">
+            <a href="#">
+              <!-- Placeholder image -->
+              <img
+                src="https://techcrunch.com/wp-content/uploads/2022/04/global_blue_tech.jpg?w=1390&crop=1"
+                class="smallImage"
+                alt="Placeholder image"
+              />
+              <p>Project 2</p>
+            </a>
+          </section>
 
-                    <!-- Whole title card content is a link (both image AND label) -->
-                    <a href="https://gordon-magill.github.io/code_refactoring/">
-                        <!-- Project icon -->
-                        <img
-                            src="./assets/images/week1_deployed_page.png"
-                            class="smallImage"
-                            alt="Screenshot of deployed code refactoring project">
-                        <!-- Project label -->
-                        <p>
-                            Code refactoring
-                        </p>
-                    </a>
-                </section>
+          <section class="labelIcon" id="project3">
+            <a href="#">
+              <img
+                src="https://techcrunch.com/wp-content/uploads/2022/04/global_blue_tech.jpg?w=1390&crop=1"
+                class="smallImage"
+                alt="Placeholder image"
+              />
+              <p>Project 3</p>
+            </a>
+          </section>
 
-                <!-- Placeholder project -->
-                <section class="labelIcon" id="project2">
-                    <a href="#">
-                        <!-- Placeholder image -->
-                        <img
-                            src="https://techcrunch.com/wp-content/uploads/2022/04/global_blue_tech.jpg?w=1390&crop=1"
-                            class="smallImage"
-                            alt="Placeholder image">
-                        <p>
-                            Project 2
-                        </p>
-                    </a>
-                </section>
+          <section class="labelIcon" id="project4">
+            <a href="#">
+              <img
+                src="https://techcrunch.com/wp-content/uploads/2022/04/global_blue_tech.jpg?w=1390&crop=1"
+                class="smallImage"
+                alt="Placeholder image"
+              />
+              <p>Project 4</p>
+            </a>
+          </section>
+        </article>
 
-                <section class="labelIcon" id="project3">
-                    <a href="#">
-                        <img
-                            src="https://techcrunch.com/wp-content/uploads/2022/04/global_blue_tech.jpg?w=1390&crop=1"
-                            class="smallImage"
-                            alt="Placeholder image">
-                        <p>
-                            Project 3
-                        </p>
-                    </a>
-                </section>
+        <!-- Very similar to the Full Stack section above in terms of formatting, but just different focus area of projects -->
+        <article class="chemengSection rowWrap">
+          <!-- h2 ID facilitates navbar linking -->
+          <h2 class="titleCard" id="chemengSection">Chemical Engineering</h2>
 
-                <section class="labelIcon" id="project4">
-                    <a href="#">
-                        <img
-                            src="https://techcrunch.com/wp-content/uploads/2022/04/global_blue_tech.jpg?w=1390&crop=1"
-                            class="smallImage"
-                            alt="Placeholder image">
-                        <p>
-                            Project 4
-                        </p>
-                    </a>
-                </section>
+          <!-- Placeholder project -->
+          <section class="labelIcon" id="project5">
+            <a href="#">
+              <img
+                src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
+                class="smallImage"
+                alt="Placeholder image"
+              />
+              <p>Project 1</p>
+            </a>
+          </section>
 
-            </article>
+          <!-- Placeholder project -->
+          <section class="labelIcon" id="project6">
+            <a href="#">
+              <img
+                src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
+                class="smallImage"
+                alt="Placeholder image"
+              />
+              <p>Project 2</p>
+            </a>
+          </section>
 
-            <!-- Very similar to the Full Stack section above in terms of formatting, but just different focus area of projects -->
-            <article class="chemengSection rowWrap" >
-                <!-- h2 ID facilitates navbar linking -->
-                <h2 class="titleCard" id="chemengSection">Chemical Engineering</h2>
+          <!-- Placeholder project -->
+          <section class="labelIcon" id="project7">
+            <a href="#">
+              <img
+                src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
+                class="smallImage"
+                alt="Placeholder image"
+              />
+              <p>Project 3</p>
+            </a>
+          </section>
 
-                <!-- Placeholder project -->
-                <section class="labelIcon" id="project5">
-                    <a href="#">
-                        <img
-                            src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
-                            class="smallImage"
-                            alt="Placeholder image">
-                        <p>
-                            Project 1
-                        </p>
-                    </a>
-                </section>
+          <!-- Placeholder project -->
+          <section class="labelIcon" id="project8">
+            <a href="#">
+              <img
+                src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
+                class="smallImage"
+                alt="Placeholder image"
+              />
+              <p>Project 4</p>
+            </a>
+          </section>
+        </article>
 
-                <!-- Placeholder project -->
-                <section class="labelIcon" id="project6">
-                    <a href="#">
-                        <img
-                            src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
-                            class="smallImage"
-                            alt="Placeholder image">
-                        <p>
-                            Project 2
-                        </p>
-                    </a>
-                </section>
+        <!-- Contact me section -->
+        <!-- Content currenly only has publicly available information - UPDATE WHEN PORTFOLIO IS MORE COMPLETE -->
+        <article class="contactMe rowWrap">
+          <!-- h2 ID facilitates navbar linking -->
+          <h2 class="titleCard" id="contactMeSection">Contact Info</h2>
 
-                <!-- Placeholder project -->
-                <section class="labelIcon" id="project7">
-                    <a href="#">
-                        <img
-                            src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
-                            class="smallImage"
-                            alt="Placeholder image">
-                        <p>
-                            Project 3
-                        </p>
-                    </a>
-                </section>
-
-                <!-- Placeholder project -->
-                <section class="labelIcon" id="project8">
-                    <a href="#">
-                        <img
-                            src="https://www.bruker.com/content/bruker/int/en/products-and-solutions/magnetic-resonance/chemistry/organic-chemistry/_jcr_content/teaserImage.coreimg.jpeg/1635421762923.jpeg"
-                            class="smallImage"
-                            alt="Placeholder image">
-                        <p>
-                            Project 4
-                        </p>
-                    </a>
-                </section>
-            </article>
-
-            <!-- Contact me section -->
-            <!-- Content currenly only has publicly available information - UPDATE WHEN PORTFOLIO IS MORE COMPLETE -->
-            <article class="contactMe rowWrap" >
-                <!-- h2 ID facilitates navbar linking -->
-                <h2 class="titleCard" id="contactMeSection"> Contact Info</h2>
-
-                <!-- Currently just a group of raw links, consider improving this formatting -->
-                <a href="#">fake-email@gmail.com</a>
-                <a href="https://github.com/Gordon-Magill">Github</a>
-                <a href="https://www.linkedin.com/in/gordon-magill-3b029a47/">LinkedIn</a>
-            </article>
-
-        </section>
-
+          <!-- Currently just a group of raw links, consider improving this formatting -->
+          <a href="#">fake-email@gmail.com</a>
+          <a href="https://github.com/Gordon-Magill">Github</a>
+          <a href="https://www.linkedin.com/in/gordon-magill-3b029a47/"
+            >LinkedIn</a
+          >
+        </article>
+      </section>
     </main>
 
     <!-- Basic footer content for copyright info -->
-    <footer class="rowWrap">
-        &copy Gordon Magill 2022
-    </footer>
-    
-</body>
+    <footer class="rowWrap">&copy Gordon Magill 2022</footer>
+  </body>
 </html>
