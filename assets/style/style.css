@@ -77,7 +77,7 @@ nav a {
 
 .hero {
   display: block;
-  height: 20%; /* Keep a low number so it doesn't dominate the screen esp on small devices */
+  height: 35%; /* Keep a low number so it doesn't dominate the screen esp on small devices */
   background-image: url("../images/hero.png");
   background-size: cover; /* Needed to make the background space filling across device sizes */
   background-position: center;
@@ -221,6 +221,11 @@ footer {
 @media screen and (max-width: 1000px) {
   header h1 {
     font-size: 5vw;
+  }
+
+  /* Shrink background image on small devices */
+  .hero {
+    height: 20%;
   }
 
   .contactMe a {
